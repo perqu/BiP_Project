@@ -6,5 +6,11 @@
   "files": [
     "data.bin"
   ],
-  "attributes": {}
+  "attributes": {
+    "lastModification": {
+      "actor": "external",
+      "timestamp": "2022-06-20T07:44:16Z"
+    },
+    "lastModificationSignature": "819e999f2a7f4bf592ee83489544af6cf25d401e2419e366dfa622fb4659d5f5"
+  }
 }
