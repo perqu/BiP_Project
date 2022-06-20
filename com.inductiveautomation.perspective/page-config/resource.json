@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "config.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "perqu",
+      "timestamp": "2022-06-20T07:37:32Z"
+    },
+    "lastModificationSignature": "6c532cd964708a7f414bdd66dfcadeda934053c217ea53aa81833b87921a9016"
+  }
+}
