@@ -1,6 +1,30 @@
 {
-  "pages": {},
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "Primary Views/Overview"
+    },
+    "/history": {
+      "viewPath": "Primary Views/History"
+    }
+  },
   "sharedDocks": {
-    "cornerPriority": "top-bottom"
+    "cornerPriority": "left-right",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 50,
+        "viewParams": {},
+        "viewPath": "Navigation/Top Nav"
+      }
+    ]
   }
 }

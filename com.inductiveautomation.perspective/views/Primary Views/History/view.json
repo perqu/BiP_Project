@@ -1,0 +1,57 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PowerChart"
+        },
+        "position": {
+          "basis": "600px",
+          "grow": 1
+        },
+        "props": {
+          "config": {
+            "endDate": {
+              "$": [
+                "ts",
+                0,
+                1655729729044
+              ],
+              "$ts": 1655729725230
+            },
+            "measureOfTime": "minutes",
+            "rangeSelectorPen": "histprov:BiP_DB:/drv:ignition-desktop-5nblevn:bip_rtp:/tag:station_1/ph",
+            "startDate": {
+              "$": [
+                "ts",
+                0,
+                1655729729044
+              ],
+              "$ts": 1655700925230
+            },
+            "tagBrowserStartPath": "histprov:BiP_DB:/drv:ignition-desktop-5nblevn:bip_rtp:/",
+            "unitOfTime": 5,
+            "visibility": {
+              "showTagBrowser": true
+            }
+          },
+          "interaction": {
+            "chartZoomLevel": 1,
+            "rangeZoomLevel": 1
+          }
+        },
+        "type": "ia.chart.powerchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

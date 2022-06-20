@@ -11,36 +11,48 @@
     "children": [
       {
         "meta": {
-          "name": "CylindricalTank"
+          "name": "EmbeddedView"
         },
         "position": {
-          "basis": "160px"
+          "basis": "320px"
         },
         "props": {
-          "value": 100
+          "path": "Templates/Overview Vessel",
+          "useDefaultViewHeight": true
         },
-        "type": "ia.display.cylindrical-tank"
+        "type": "ia.display.view"
       },
       {
         "meta": {
-          "name": "CylindricalTank_0"
+          "name": "EmbeddedView_0"
         },
         "position": {
-          "basis": "160px"
+          "basis": "320px"
         },
         "props": {
-          "value": 50
+          "params": {
+            "Station_Number": 2
+          },
+          "path": "Templates/Overview Vessel",
+          "useDefaultViewHeight": true
         },
-        "type": "ia.display.cylindrical-tank"
+        "type": "ia.display.view"
       },
       {
         "meta": {
-          "name": "CylindricalTank_1"
+          "name": "EmbeddedView_1"
         },
         "position": {
-          "basis": "160px"
+          "basis": "320px"
         },
-        "type": "ia.display.cylindrical-tank"
+        "props": {
+          "params": {
+            "Station_Number": 3
+          },
+          "path": "Templates/Overview Vessel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
       }
     ],
     "meta": {

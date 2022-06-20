@@ -4,13 +4,13 @@
   "restricted": false,
   "overridable": true,
   "files": [
-    "config.json"
+    "style.json"
   ],
   "attributes": {
     "lastModification": {
       "actor": "perqu",
-      "timestamp": "2022-06-20T13:23:18Z"
+      "timestamp": "2022-06-20T12:09:01Z"
     },
-    "lastModificationSignature": "1376b50b5b10e2ac181d665df3a73182ff8f7a9af350de2a86c0bf061ba72bc8"
+    "lastModificationSignature": "e98ec1f0596c25a14d94239050f498878d5c76b4924f4957e78134c067026ad2"
   }
 }
