@@ -1,0 +1,226 @@
+{
+  "custom": {},
+  "params": {
+    "Station_Number": 1
+  },
+  "propConfig": {
+    "params.Station_Number": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Vessel"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Station_Number": "{view.params.Station_Number}"
+                        },
+                        "tagPath": "[BiP_RTP]Station_{Station_Number}/tank_capacity"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "location": "top"
+                  },
+                  "style": {
+                    "classes": "text/Data",
+                    "paddingBottom": 60,
+                    "paddingTop": 60
+                  },
+                  "value": {
+                    "style": {
+                      "classes": "text/Data"
+                    }
+                  }
+                },
+                "type": "ia.symbol.vessel"
+              }
+            ],
+            "meta": {
+              "name": "Vessel Container"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center",
+              "style": {
+                "paddingBottom": 20,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 20
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Pump"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Station_Number": "{view.params.Station_Number}"
+                        },
+                        "tagPath": "[BiP_RTP]Station_{Station_Number}/pump_fault"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": null,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "Running"
+                            },
+                            {
+                              "input": false,
+                              "output": "Faulted"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "location": "top"
+                  },
+                  "style": {
+                    "classes": "text/Data",
+                    "paddingBottom": 20,
+                    "paddingTop": 20
+                  },
+                  "value": {}
+                },
+                "type": "ia.symbol.pump"
+              },
+              {
+                "meta": {
+                  "name": "Valve"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Station_Number": "{view.params.Station_Number}"
+                        },
+                        "tagPath": "[BiP_RTP]Station_{Station_Number}/valve_flow"
+                      },
+                      "transforms": [
+                        {
+                          "formatType": "numeric",
+                          "formatValue": "##.## GPM",
+                          "type": "format"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "location": "top"
+                  },
+                  "style": {
+                    "classes": "text/Data",
+                    "paddingBottom": 20,
+                    "paddingTop": 20
+                  },
+                  "value": {}
+                },
+                "type": "ia.symbol.valve"
+              }
+            ],
+            "meta": {
+              "name": "Pump and Valve Container"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "paddingBottom": 20,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 20
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Top Container"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "300px"
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -17,6 +17,9 @@
           "basis": "320px"
         },
         "props": {
+          "params": {
+            "Station_Number": 1
+          },
           "path": "Templates/Overview Vessel",
           "useDefaultViewHeight": true
         },

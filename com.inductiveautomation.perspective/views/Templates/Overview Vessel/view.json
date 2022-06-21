@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "Station_Number": 1
+    "Station_Number": "value"
   },
   "propConfig": {
     "params.Station_Number": {
