@@ -9,7 +9,12 @@
       "persistent": true
     }
   },
-  "props": {},
+  "props": {
+    "defaultSize": {
+      "height": 1105,
+      "width": 1199
+    }
+  },
   "root": {
     "children": [
       {
@@ -21,8 +26,7 @@
                   "name": "Vessel"
                 },
                 "position": {
-                  "basis": "100px",
-                  "grow": 1
+                  "basis": "350px"
                 },
                 "propConfig": {
                   "props.value.value": {
@@ -44,9 +48,7 @@
                     "location": "top"
                   },
                   "style": {
-                    "classes": "text/Data",
-                    "paddingBottom": 60,
-                    "paddingTop": 60
+                    "classes": "text/Data"
                   },
                   "value": {
                     "style": {
@@ -55,23 +57,104 @@
                   }
                 },
                 "type": "ia.symbol.vessel"
+              },
+              {
+                "meta": {
+                  "name": "FlexRepeater"
+                },
+                "position": {
+                  "basis": "200px"
+                },
+                "propConfig": {
+                  "props.instances[0].value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Station_Number": "{view.params.Station_Number}"
+                        },
+                        "tagPath": "[BiP_RTP]Station_{Station_Number}/ph"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.instances[1].value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Station_Number": "{view.params.Station_Number}"
+                        },
+                        "tagPath": "[BiP_RTP]Station_{Station_Number}/temperature"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.instances[2].value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Station_Number": "{view.params.Station_Number}"
+                        },
+                        "tagPath": "[BiP_RTP]Station_{Station_Number}/viscosity"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column",
+                  "elementStyle": {
+                    "marginBottom": 10,
+                    "marginTop": 10
+                  },
+                  "instances": [
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "name": "pH",
+                      "unit": ""
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "name": "Temperature",
+                      "unit": "°F"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "name": "Viscosity",
+                      "unit": "Pa-s"
+                    }
+                  ],
+                  "justify": "space-around",
+                  "path": "Templates/Data Card",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
               }
             ],
             "meta": {
               "name": "Vessel Container"
             },
             "position": {
-              "basis": "200px"
+              "basis": "312px"
             },
             "props": {
               "direction": "column",
-              "justify": "center",
-              "style": {
-                "paddingBottom": 20,
-                "paddingLeft": 20,
-                "paddingRight": 20,
-                "paddingTop": 20
-              }
+              "justify": "center"
             },
             "type": "ia.container.flex"
           },
@@ -82,8 +165,7 @@
                   "name": "Pump"
                 },
                 "position": {
-                  "basis": "100px",
-                  "grow": 1
+                  "basis": "200px"
                 },
                 "propConfig": {
                   "props.value.text": {
@@ -120,14 +202,19 @@
                 },
                 "props": {
                   "label": {
-                    "location": "top"
+                    "location": "top",
+                    "style": {
+                      "paddingBottom": "1vh"
+                    }
                   },
                   "style": {
-                    "classes": "text/Data",
-                    "paddingBottom": 20,
-                    "paddingTop": 20
+                    "classes": "text/Data"
                   },
-                  "value": {}
+                  "value": {
+                    "style": {
+                      "paddingTop": "1vh"
+                    }
+                  }
                 },
                 "type": "ia.symbol.pump"
               },
@@ -136,8 +223,7 @@
                   "name": "Valve"
                 },
                 "position": {
-                  "basis": "100px",
-                  "grow": 1
+                  "basis": "200px"
                 },
                 "propConfig": {
                   "props.value.text": {
@@ -163,14 +249,19 @@
                 },
                 "props": {
                   "label": {
-                    "location": "top"
+                    "location": "top",
+                    "style": {
+                      "paddingBottom": "1vh"
+                    }
                   },
                   "style": {
-                    "classes": "text/Data",
-                    "paddingBottom": 20,
-                    "paddingTop": 20
+                    "classes": "text/Data"
                   },
-                  "value": {}
+                  "value": {
+                    "style": {
+                      "paddingTop": "1vh"
+                    }
+                  }
                 },
                 "type": "ia.symbol.valve"
               }
@@ -183,11 +274,10 @@
             },
             "props": {
               "direction": "column",
+              "justify": "space-around",
               "style": {
-                "paddingBottom": 20,
-                "paddingLeft": 20,
-                "paddingRight": 20,
-                "paddingTop": 20
+                "paddingBottom": "5%",
+                "paddingTop": "5%"
               }
             },
             "type": "ia.container.flex"
@@ -197,7 +287,7 @@
           "name": "Top Container"
         },
         "position": {
-          "basis": "200px",
+          "basis": "150px",
           "grow": 1
         },
         "props": {
@@ -210,7 +300,34 @@
           "name": "AlarmStatusTable"
         },
         "position": {
-          "basis": "300px"
+          "basis": "250px"
+        },
+        "propConfig": {
+          "props.filters.active.conditions.source": {
+            "binding": {
+              "config": {
+                "expression": "\"*Station_\" + {view.params.Station_Number} + \"*\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "columns": {
+            "active": {
+              "source": {
+                "enabled": false
+              }
+            }
+          },
+          "filters": {
+            "active": {
+              "conditions": {}
+            }
+          },
+          "toolbar": {
+            "enabled": false
+          }
         },
         "type": "ia.display.alarmstatustable"
       }

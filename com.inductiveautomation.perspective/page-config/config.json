@@ -6,6 +6,10 @@
     },
     "/history": {
       "viewPath": "Primary Views/History"
+    },
+    "/station_details/:Station_Number": {
+      "title": "",
+      "viewPath": "Primary Views/Station Details"
     }
   },
   "sharedDocks": {
