@@ -46,7 +46,7 @@
             {
               "enabled": true,
               "icon": {
-                "path": ""
+                "path": "material/info"
               },
               "items": [
                 {

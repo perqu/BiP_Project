@@ -276,8 +276,8 @@
               "direction": "column",
               "justify": "space-around",
               "style": {
-                "paddingBottom": "5%",
-                "paddingTop": "5%"
+                "paddingBottom": "1%",
+                "paddingTop": "1%"
               }
             },
             "type": "ia.container.flex"
