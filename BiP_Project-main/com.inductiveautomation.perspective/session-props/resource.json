@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "props.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "perqu",
+      "timestamp": "2022-06-21T09:49:29Z"
+    },
+    "lastModificationSignature": "47abedc881ea524ae81d79f82be28c3198a0a0e43c91ca4c223ffc3f398ff14c"
+  }
+}

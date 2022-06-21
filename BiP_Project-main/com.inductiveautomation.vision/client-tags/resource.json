@@ -1,0 +1,16 @@
+{
+  "scope": "C",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "perqu",
+      "timestamp": "2022-06-21T09:49:29Z"
+    },
+    "lastModificationSignature": "b9167c05646213312a637cffe3e3dd35f5e6a33fbdb32af41daa8446e06cb27e"
+  }
+}

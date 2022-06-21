@@ -1,0 +1,108 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 51
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "HorizontalMenu"
+        },
+        "position": {
+          "basis": "46px",
+          "grow": 1
+        },
+        "props": {
+          "items": [
+            {
+              "enabled": true,
+              "icon": {
+                "color": "#6C6C6C",
+                "path": "material/home"
+              },
+              "label": "Start",
+              "style": {
+                "classes": ""
+              },
+              "target": "/"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "color": "",
+                "path": "material/stacked_line_chart"
+              },
+              "items": [],
+              "label": "History",
+              "style": {
+                "classes": ""
+              },
+              "target": "/history"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": ""
+              },
+              "items": [
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": ""
+                  },
+                  "items": [],
+                  "label": "Station 1",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/station_details/1"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": ""
+                  },
+                  "items": [],
+                  "label": "Station 2",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/station_details/2"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": ""
+                  },
+                  "items": [],
+                  "label": "Station 3",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/station_details/3"
+                }
+              ],
+              "label": "Station Details",
+              "style": {
+                "classes": ""
+              },
+              "target": ""
+            }
+          ]
+        },
+        "type": "ia.navigation.horizontalmenu"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

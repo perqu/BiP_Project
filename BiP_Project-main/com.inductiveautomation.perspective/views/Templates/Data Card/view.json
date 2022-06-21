@@ -1,0 +1,114 @@
+{
+  "custom": {},
+  "params": {
+    "name": "name",
+    "unit": "unit",
+    "value": "value"
+  },
+  "propConfig": {
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 45,
+      "width": 299
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Name label"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "transforms": [
+                {
+                  "expression": "{value} + \":\"",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "right"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Value Label"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.value} + \" \" + {view.params.unit}"
+              },
+              "transforms": [
+                {
+                  "code": "\tval \u003d \u0027%.2f\u0027 % float((value[:value.find(\" \")]))\n\tunit \u003d value[value.find(\" \")+1:]\n\treturn str(val) + \"  \" + unit",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "text/Data",
+            "paddingLeft": "10px",
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "justify": "center",
+      "style": {
+        "backgroundColor": "var(--neutral-30)",
+        "borderBottomLeftRadius": "6px",
+        "borderBottomRightRadius": "6px",
+        "borderColor": "var(--neutral-50)",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": "6px",
+        "borderTopRightRadius": "6px",
+        "borderWidth": "1px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

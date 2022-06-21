@@ -1,0 +1,34 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "Primary Views/Overview"
+    },
+    "/history": {
+      "viewPath": "Primary Views/History"
+    },
+    "/station_details/:Station_Number": {
+      "title": "",
+      "viewPath": "Primary Views/Station Details"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "left-right",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 50,
+        "viewParams": {},
+        "viewPath": "Navigation/Top Nav"
+      }
+    ]
+  }
+}

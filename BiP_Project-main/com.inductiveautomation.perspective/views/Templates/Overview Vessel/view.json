@@ -1,0 +1,127 @@
+{
+  "custom": {},
+  "params": {
+    "Station_Number": "value"
+  },
+  "propConfig": {
+    "params.Station_Number": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "title"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat(\"Station \", {view.params.Station_Number})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": "24px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Alarm Banner"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Station_Number": "{view.params.Station_Number}"
+                },
+                "tagPath": "[BiP_RTP]Station_{Station_Number}/tank_capacity/Alarms/Station Capacity Alarm.IsActive"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "var(--error)",
+            "fontSize": "20px",
+            "fontWeight": "bold",
+            "textAlign": "center"
+          },
+          "text": "Alarm - Capacity"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Vessel"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.value.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Station_Number": "{view.params.Station_Number}"
+                },
+                "tagPath": "[BiP_RTP]Station_{Station_Number}/tank_capacity"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": ""
+          },
+          "style": {
+            "classes": "text/Data",
+            "paddingBottom": 10,
+            "paddingTop": 10
+          },
+          "value": {
+            "style": {
+              "classes": "text/Data"
+            }
+          }
+        },
+        "type": "ia.symbol.vessel"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}
